@@ -64,14 +64,7 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_food_sales(excel_path: str, sheet_name: str) -> pd.DataFrame:
-    """Read the FoodSales sheet and combine every stacked year block.
 
-    Each block looks like:
-        <year>, None, None, ...        <- year label row (skip)
-        ID, Date, Region, ...          <- repeated header row (skip)
-        <data rows...>
-    blocks are separated by a fully-empty row.
-    """
     raw = pd.read_excel(excel_path, sheet_name=sheet_name, header=None)
 
     blocks = []
