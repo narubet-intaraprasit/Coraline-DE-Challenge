@@ -1,0 +1,12 @@
+# Secrets (Task 1/2 credentials are documented in README.md and .env.example instead)
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
